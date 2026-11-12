@@ -15,7 +15,7 @@ steps={
  'video':['下载 Windows 安装包并安装录屏工坊。','选择屏幕或窗口，打开需要的系统声音与麦克风。','按需要添加滤镜、文字或画中画，开始录制。','停止后在作品库回放和定位视频文件。'],
  'avatar':['下载工作流源码包并解压到本地目录。','运行 setup.bat，按脚本安装运行环境与模型。首次安装需要网络与足够的磁盘空间。','运行 start.bat，浏览器会打开本机创作台 http://127.0.0.1:7860 。','上传已获授权的照片、填写文案，选择已配置引擎生成视频。']}
 files={'music':('MusicForYou-0.6.5-win-x64-setup.exe','Windows 安装包 · v0.6.5'),'podcast':('EchoPod-0.1.0-win-x64.exe','Windows 安装包 · v0.1.0'),'video':('VideoForYou-0.1.1-win-x64-setup.exe','Windows 安装包 · v0.1.1'),'avatar':('digital-human-source.zip','本地部署源码包')}
-nav='''<header class="header"><a class="brand" href="./"><span class="brand-symbol">a<span>i</span></span><span>AIONE<span class="one">1</span><small>姚毛毛的工具与创作</small></span></a><nav aria-label="主导航"><a href="./#tools">工具目录</a><a href="about.html">关于自己</a></nav></header>'''
+nav='''<header class="header"><a class="brand" href="./"><span class="brand-symbol">a<span>i</span></span><span>AIONE<span class="one">1</span><small>姚毛毛的工具与创作</small></span></a><nav aria-label="主导航"><a href="./#tools">工具目录</a><a href="about.html">关于自己</a><a class="blog-link" href="https://www.cnblogs.com/yaomaomao" target="_blank" rel="noopener noreferrer">博客园 ↗</a></nav></header>'''
 foot='''<footer><a class="footer-brand" href="./">AIONE1<span>一个人，也可以把想法做出来。</span></a><div><a href="about.html">关于姚毛毛 ↗</a><p>© 2026 AIONE1 · 姚毛毛</p></div></footer>'''
 def page(path,title,body):
  p=D/path;p.parent.mkdir(parents=True,exist_ok=True)
