@@ -31,3 +31,9 @@ about='''<main id="main" class="about-page"><section class="about-hero"><p class
 (D/'about.html').write_text(page('关于姚毛毛 · AIONE1','为什么建 AIONE1：把日常里的小需要做成顺手的工具，为创作留出更多空间。',about,True),encoding='utf-8')
 (D/'assets/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#244f40"/><text x="11" y="47" fill="#f6f7e9" font-size="43" font-family="Georgia">a</text><circle cx="47" cy="19" r="5" fill="#d3e4af"/></svg>',encoding='utf-8')
 print('Built 8 tools and 2 pages')
+import runpy
+runpy.run_path(str(ROOT/'scripts'/'build_products.py'))
+runpy.run_path(str(ROOT/'scripts'/'build_apps.py'))
+runpy.run_path(str(ROOT/'scripts'/'build_admin.py'))
+runpy.run_path(str(ROOT/'scripts'/'build_avatar.py'))
+runpy.run_path(str(ROOT/'scripts'/'build_media.py'))

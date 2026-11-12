@@ -1,0 +1,66 @@
+{
+  "title": "播客精选",
+  "items": [
+    {
+      "id": "396436cf3b6ade688184",
+      "title": "NVIDIA CEO Jensen Huang's Vision for the Future",
+      "artist": "Cleo Abram",
+      "duration": 3783,
+      "kind": "播客",
+      "tags": [],
+      "category": "ai-tech",
+      "url": "../../media/podcast/audio/396436cf3b6ade688184.m4a",
+      "cover": "../../media/podcast/covers/396436cf3b6ade688184.webp",
+      "bytes": 61182110
+    },
+    {
+      "id": "7f348acca38c95178c29",
+      "title": "The benefits of doing nothing ⏲️ 6 Minute English",
+      "artist": "BBC Learning English",
+      "duration": 379,
+      "kind": "播客",
+      "tags": [],
+      "category": "english-learning",
+      "url": "../../media/podcast/audio/7f348acca38c95178c29.m4a",
+      "cover": "../../media/podcast/covers/7f348acca38c95178c29.webp",
+      "bytes": 6135769
+    },
+    {
+      "id": "c6a6f49d0a7c45847225",
+      "title": "The health benefits of apples ⏲️ 6 Minute English",
+      "artist": "BBC Learning English",
+      "duration": 383,
+      "kind": "播客",
+      "tags": [],
+      "category": "english-learning",
+      "url": "../../media/podcast/audio/c6a6f49d0a7c45847225.m4a",
+      "cover": "../../media/podcast/covers/c6a6f49d0a7c45847225.webp",
+      "bytes": 6192472
+    },
+    {
+      "id": "7656bbb41c7d1ed9fe59",
+      "title": "为什么你应该去听Podcast播客?-我最爱的播客推荐(财经, 知识和故事类Podcasts)",
+      "artist": "一口新飯",
+      "duration": 1034,
+      "kind": "播客",
+      "tags": [],
+      "category": "zh-business",
+      "url": "../../media/podcast/audio/7656bbb41c7d1ed9fe59.m4a",
+      "cover": "../../media/podcast/covers/7656bbb41c7d1ed9fe59.webp",
+      "bytes": 16723223
+    },
+    {
+      "id": "6478186f00d64c99d7da",
+      "title": "How to study English as a busy person  | The English Podcast",
+      "artist": "English with Evie",
+      "duration": 945,
+      "kind": "播客",
+      "tags": [],
+      "category": "english-learning",
+      "url": "../../media/podcast/audio/6478186f00d64c99d7da.m4a",
+      "cover": "../../media/podcast/covers/6478186f00d64c99d7da.webp",
+      "bytes": 15277834
+    }
+  ],
+  "count": 5
+}

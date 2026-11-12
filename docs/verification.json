@@ -1,0 +1,168 @@
+{
+  "checked_at": "2026-11-12T09:55:37.934233+00:00",
+  "public": "http://8.133.244.26",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/about.html",
+      "status": 200
+    },
+    {
+      "path": "/admin/",
+      "status": 200
+    },
+    {
+      "path": "/liubao/",
+      "status": 200
+    },
+    {
+      "path": "/liubao/data.json",
+      "status": 200
+    },
+    {
+      "path": "/apps/music/",
+      "status": 200
+    },
+    {
+      "path": "/apps/podcast/",
+      "status": 200
+    },
+    {
+      "path": "/apps/video/",
+      "status": 200
+    },
+    {
+      "path": "/tools/music/",
+      "status": 200
+    },
+    {
+      "path": "/tools/podcast/",
+      "status": 200
+    },
+    {
+      "path": "/tools/video/",
+      "status": 200
+    },
+    {
+      "path": "/tools/avatar/",
+      "status": 200
+    },
+    {
+      "path": "/tools/qingdeng/",
+      "status": 200
+    },
+    {
+      "path": "/tools/liubao/",
+      "status": 200
+    },
+    {
+      "path": "/tools/lumen/",
+      "status": 200
+    },
+    {
+      "path": "/tools/dukou/",
+      "status": 200
+    },
+    {
+      "path": "/downloads/MusicForYou-0.6.5-win-x64-setup.exe",
+      "status": 200
+    },
+    {
+      "path": "/downloads/EchoPod-0.1.0-win-x64.exe",
+      "status": 200
+    },
+    {
+      "path": "/downloads/VideoForYou-0.1.1-win-x64-setup.exe",
+      "status": 200
+    },
+    {
+      "path": "/downloads/digital-human-source.zip",
+      "status": 200
+    },
+    {
+      "path": "/downloads/SHA256SUMS.txt",
+      "status": 200
+    }
+  ],
+  "unauthenticated_config_status": 401,
+  "public_http_login_status": 403,
+  "authenticated_preview_and_nginx_apply": "passed",
+  "logout_invalidation": "passed",
+  "all_downloads_available": true,
+  "digital_human_backend_status": 200,
+  "audio_checks": [
+    {
+      "app": "music",
+      "id": "33799a5cff2eb2cd622c",
+      "range_status": 206
+    },
+    {
+      "app": "music",
+      "id": "b678b24298d715ab38b7",
+      "range_status": 206
+    },
+    {
+      "app": "music",
+      "id": "c5a755b39f2f5bf25a96",
+      "range_status": 206
+    },
+    {
+      "app": "music",
+      "id": "a4e01d668da7c06618cf",
+      "range_status": 206
+    },
+    {
+      "app": "music",
+      "id": "771fb3ce16aaf2e39cf5",
+      "range_status": 206
+    },
+    {
+      "app": "music",
+      "id": "98ffa80b837ee974c4d6",
+      "range_status": 206
+    },
+    {
+      "app": "music",
+      "id": "26fb52ada988a86532f3",
+      "range_status": 206
+    },
+    {
+      "app": "music",
+      "id": "ef3f269b3a29996246be",
+      "range_status": 206
+    },
+    {
+      "app": "music",
+      "id": "165c465b1896e00b127a",
+      "range_status": 206
+    },
+    {
+      "app": "podcast",
+      "id": "396436cf3b6ade688184",
+      "range_status": 206
+    },
+    {
+      "app": "podcast",
+      "id": "7f348acca38c95178c29",
+      "range_status": 206
+    },
+    {
+      "app": "podcast",
+      "id": "c6a6f49d0a7c45847225",
+      "range_status": 206
+    },
+    {
+      "app": "podcast",
+      "id": "7656bbb41c7d1ed9fe59",
+      "range_status": 206
+    },
+    {
+      "app": "podcast",
+      "id": "6478186f00d64c99d7da",
+      "range_status": 206
+    }
+  ]
+}

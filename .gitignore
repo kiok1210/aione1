@@ -7,5 +7,6 @@
 *.tar.gz
 __pycache__/
 qa/
-local-*/
+local-*
 node_modules/
+/dist/media/

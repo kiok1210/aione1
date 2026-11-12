@@ -1,0 +1,145 @@
+{
+  "title": "音乐与有声书",
+  "items": [
+    {
+      "id": "33799a5cff2eb2cd622c",
+      "title": "🎹 頂級的復古爵士質感，一開口就把人帶回舊時光｜溫柔而克制的午夜情調｜爵士女聲・慵懶歌單・深夜BGM",
+      "artist": "絲悅的歌",
+      "duration": 4022,
+      "kind": "音乐",
+      "tags": [
+        "爵士",
+        "BGM",
+        "深夜",
+        "合辑",
+        "深夜氛围"
+      ],
+      "category": "",
+      "url": "../../media/music/audio/33799a5cff2eb2cd622c.m4a",
+      "cover": "../../media/music/covers/33799a5cff2eb2cd622c.webp",
+      "bytes": 65091572
+    },
+    {
+      "id": "b678b24298d715ab38b7",
+      "title": "Classic Rock Songs 70's 80's 90's Playlist 🔥 Guns N Roses, Metallica, The Police, Pink Floyd",
+      "artist": "80s90s Rock Rewind",
+      "duration": 6389,
+      "kind": "音乐",
+      "tags": [
+        "英文",
+        "摇滚",
+        "合辑"
+      ],
+      "category": "",
+      "url": "../../media/music/audio/b678b24298d715ab38b7.m4a",
+      "cover": "../../media/music/covers/b678b24298d715ab38b7.webp",
+      "bytes": 103390486
+    },
+    {
+      "id": "c5a755b39f2f5bf25a96",
+      "title": "70s & 80s CLASSIC ROCK 🎸 | The Songs We Grew Up With",
+      "artist": "Flashback Dreams",
+      "duration": 7355,
+      "kind": "音乐",
+      "tags": [
+        "英文",
+        "摇滚",
+        "音乐",
+        "合辑"
+      ],
+      "category": "",
+      "url": "../../media/music/audio/c5a755b39f2f5bf25a96.m4a",
+      "cover": "../../media/music/covers/c5a755b39f2f5bf25a96.webp",
+      "bytes": 119025870
+    },
+    {
+      "id": "a4e01d668da7c06618cf",
+      "title": "【令和×平成】アニソン紅白歌合戦！【新旧名曲対決】",
+      "artist": "もりょい",
+      "duration": 4760,
+      "kind": "音乐",
+      "tags": [
+        "日文",
+        "合辑",
+        "日漫金曲"
+      ],
+      "category": "",
+      "url": "../../media/music/audio/a4e01d668da7c06618cf.m4a",
+      "cover": "../../media/music/covers/a4e01d668da7c06618cf.webp",
+      "bytes": 77037162
+    },
+    {
+      "id": "771fb3ce16aaf2e39cf5",
+      "title": "ANIME SONGS MIX | FULL SONGS! 🕰️🌟🔥",
+      "artist": "PerfectKoji",
+      "duration": 8542,
+      "kind": "音乐",
+      "tags": [
+        "合辑",
+        "日漫金曲"
+      ],
+      "category": "",
+      "url": "../../media/music/audio/771fb3ce16aaf2e39cf5.m4a",
+      "cover": "../../media/music/covers/771fb3ce16aaf2e39cf5.webp",
+      "bytes": 138236318
+    },
+    {
+      "id": "98ffa80b837ee974c4d6",
+      "title": "未命名收藏音频",
+      "artist": "未知艺术家",
+      "duration": 42.446009,
+      "kind": "音乐",
+      "tags": [],
+      "category": "",
+      "url": "../../media/music/audio/98ffa80b837ee974c4d6.mp4",
+      "cover": "",
+      "bytes": 2411081
+    },
+    {
+      "id": "26fb52ada988a86532f3",
+      "title": "茅盾文学奖系列有声书《张居正》全四卷 p01 木兰歌1",
+      "artist": "未知艺术家",
+      "duration": 1234.085669,
+      "kind": "有声书",
+      "tags": [
+        "有声小说"
+      ],
+      "category": "",
+      "url": "../../media/music/audio/26fb52ada988a86532f3.m4a",
+      "cover": "../../media/music/covers/26fb52ada988a86532f3.jpg",
+      "bytes": 20232722
+    },
+    {
+      "id": "ef3f269b3a29996246be",
+      "title": "一小时劲爆摇滚歌曲合集，不羁的灵魂，唯有放肆和洒脱。#摇滚 #经典歌曲 #音乐推荐 #摇滚歌曲 #音乐分享",
+      "artist": "甜度刚好",
+      "duration": 3446,
+      "kind": "音乐",
+      "tags": [
+        "摇滚",
+        "合辑"
+      ],
+      "category": "",
+      "url": "../../media/music/audio/ef3f269b3a29996246be.m4a",
+      "cover": "../../media/music/covers/ef3f269b3a29996246be.webp",
+      "bytes": 55757061
+    },
+    {
+      "id": "165c465b1896e00b127a",
+      "title": "Wonderful movie soundtracks",
+      "artist": "Pamela D. Wilburn",
+      "duration": 5006,
+      "kind": "音乐",
+      "tags": [
+        "音乐",
+        "合辑",
+        "影视配乐"
+      ],
+      "category": "",
+      "url": "../../media/music/audio/165c465b1896e00b127a.m4a",
+      "cover": "../../media/music/covers/165c465b1896e00b127a.webp",
+      "bytes": 81010052
+    }
+  ],
+  "count": 9
+}
