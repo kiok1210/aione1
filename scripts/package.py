@@ -1,5 +1,5 @@
 from pathlib import Path
-import zipfile, shutil,hashlib,json,datetime
+import zipfile, shutil,hashlib,json,datetime,sys
 R=Path(__file__).resolve().parents[1]
 out=R/'local-downloads';out.mkdir(exist_ok=True)
 sources=[(Path(r'D:\AIPROJECT\musicForYou\release\MusicForYou-0.6.5-win-x64-setup.exe'),'MusicForYou-0.6.5-win-x64-setup.exe'),(Path(r'D:\AIPROJECT\bokeForYou\release-app\EchoPod-0.1.0-win-x64.exe'),'EchoPod-0.1.0-win-x64.exe'),(Path(r'D:\AIPROJECT\videoForYou\release\VideoForYou-0.1.1-win-x64-setup.exe'),'VideoForYou-0.1.1-win-x64-setup.exe')]
@@ -19,5 +19,9 @@ for f in sorted(out.iterdir()):
 bundles=R/'local-packages';bundles.mkdir(exist_ok=True)
 with zipfile.ZipFile(bundles/'aione1-dist.zip','w',zipfile.ZIP_DEFLATED) as z:
  for f in (R/'dist').rglob('*'):
-  if f.is_file() and f.relative_to(R/'dist').parts[0]!='media':z.write(f,Path('dist')/f.relative_to(R/'dist'))
+  if f.is_file() and f.relative_to(R/'dist').parts[0] not in {'media','liubao','downloads'}:z.write(f,Path('dist')/f.relative_to(R/'dist'))
+if '--with-content' in sys.argv:
+ with zipfile.ZipFile(bundles/'aione1-complete-dist.zip','w',zipfile.ZIP_STORED) as z:
+  for f in (R/'dist').rglob('*'):
+   if f.is_file():z.write(f,Path('dist')/f.relative_to(R/'dist'))
 print('Packaged static dist and actual downloads:',len(hashes))

@@ -10,3 +10,5 @@ qa/
 local-*
 node_modules/
 /dist/media/
+/dist/liubao/
+/dist/downloads/

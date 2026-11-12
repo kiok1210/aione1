@@ -15,7 +15,7 @@ if not authfile.exists():
 archive=ROOT/'site-release.tar.gz'
 with tarfile.open(archive,'w:gz') as tar:
  for f in (ROOT/'dist').rglob('*'):
-  if f.is_file() and f.relative_to(ROOT/'dist').parts[0]!='media':tar.add(f,arcname=Path('dist')/f.relative_to(ROOT/'dist'))
+  if f.is_file() and f.relative_to(ROOT/'dist').parts[0] not in {'media','liubao','downloads'}:tar.add(f,arcname=Path('dist')/f.relative_to(ROOT/'dist'))
  tar.add(ROOT/'scripts'/'admin_server.py',arcname='admin_server.py')
  tar.add(authfile,arcname='admin.json')
  source=ROOT/'local-repositories'/'digital-human'

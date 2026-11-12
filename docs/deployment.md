@@ -47,6 +47,8 @@
 
 Nginx 已包含两个域名。DNS 生效后还需安装有效 TLS 证书并配置 443；当前不宣称 HTTPS 上线。
 
+实际公网 Host 测试中，aione1.com 返回阿里云 Beaver 的 403 页面，标题为 Non-compliance ICP Filing。服务器内用该 Host 访问 Nginx 正常；域名还存在云端备案接入拦截，不能仅凭 Nginx 配置宣称域名已经上线。当前可用入口是 http://8.133.244.26/ 。
+
 管理操作只允许 HTTPS 或 SSH 隧道访问。公网 HTTP 可看到登录页，但不能提交口令、修改配置。当前使用：
 
     ssh -i C:\Users\Administrator\.ssh\vinylbox_server -L 18081:127.0.0.1:80 root@8.133.244.26
@@ -80,6 +82,10 @@ Windows 安装 Nginx 后，将生成文件放在其 conf 目录，便于 include
     C:\nginx\nginx.exe -p C:\nginx\ -c conf\aione1.conf
 
 Linux 同样可用生成器，或在虚拟主机中设置 root 为 dist。此便携静态配置不包含 Linux 专用的 systemd 管理后端、漫画高清原图和安装包，这些需单独接入。
+
+本机执行 build_content.py 后，dist 内也有完整漫画与下载目录；build_media.py 接入原有音频与封面。package.py --with-content 可另外输出包含这些内容的 aione1-complete-dist.zip，供 Windows / Linux 静态迁移。该内容包与媒体不提交 GitHub。
+
+当前 VPS 为 2 核、约 1.6 GB 内存，检查时可用内存约 399 MB，同时承担既有服务。数字人 Python API 已启动，但完整模型推理环境尚未安装；本次未在该服务器强行安装和运行大型推理模型。工作台会显示真实缺项并禁用生成，本机已安装引擎的工作台仍可使用。
 
 ## 回滚
 

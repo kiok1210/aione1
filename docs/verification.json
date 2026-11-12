@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-12T09:55:37.934233+00:00",
+  "checked_at": "2026-11-12T10:01:44.757775+00:00",
   "public": "http://8.133.244.26",
   "checks": [
     {
@@ -93,6 +93,17 @@
   "logout_invalidation": "passed",
   "all_downloads_available": true,
   "digital_human_backend_status": 200,
+  "digital_human_generation_ready": false,
+  "digital_human_missing": [
+    "SadTalker 程序",
+    "SadTalker 256 模型",
+    "SadTalker 映射模型 1",
+    "SadTalker 映射模型 2",
+    "Piper 中文声音",
+    "FFmpeg"
+  ],
+  "custom_domain_host_status": 403,
+  "custom_domain_icp_interception": true,
   "audio_checks": [
     {
       "app": "music",

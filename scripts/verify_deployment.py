@@ -34,6 +34,14 @@ report['all_downloads_available']=all(x['status']==200 for x in report['checks']
 status,body=request(a.public+'/apps/avatar/api/ping')
 report['digital_human_backend_status']=status
 assert status==200,('digital human backend',status)
+status,body=request(a.public+'/apps/avatar/api/health')
+assert status==200
+health=json.loads(body)
+report['digital_human_generation_ready']=health.get('ready',False)
+report['digital_human_missing']=health.get('missing',[])
+status,body=request(a.public+'/',headers={'Host':'aione1.com'})
+report['custom_domain_host_status']=status
+report['custom_domain_icp_interception']='Non-compliance ICP Filing' in body.decode('utf-8',errors='ignore')
 audio_checks=[]
 for app in ['music','podcast']:
  status,body=request(a.public+'/apps/'+app+'/library.json');assert status==200
