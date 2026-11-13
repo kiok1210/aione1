@@ -13,14 +13,15 @@ SESSIONS={}; FAILURES={}; LOCK=threading.RLock()
 IDS={'music','podcast','video','avatar','qingdeng','liubao','lumen','dukou'}
 NAMES={'music':'musicForYou','podcast':'bokeForYou','video':'videoForYou','avatar':'数字人口播','qingdeng':'青灯','liubao':'六宝','lumen':'lumen remote','dukou':'渡口'}
 def default_config():
- return {'routes':[{'id':id,'name':NAMES[id],'mode':'static' if id in {'music','podcast','video','liubao','avatar'} else 'intro','port':7860 if id=='avatar' else 8787} for id in NAMES]}
+ return {'routes':[{'id':id,'name':NAMES[id],'mode':'external' if id=='qingdeng' else ('static' if id in {'music','podcast','video','liubao','avatar'} else 'intro'),'port':4317 if id=='qingdeng' else (7860 if id=='avatar' else 8787)} for id in NAMES]}
 def validate(data):
  if not isinstance(data,dict) or not isinstance(data.get('routes'),list) or len(data['routes'])!=8:raise ValueError('需要且只能配置 8 个工具')
  result=[];seen=set()
  for row in data['routes']:
   id=row.get('id');mode=row.get('mode');port=row.get('port',8787)
   if id not in IDS or id in seen:raise ValueError('工具标识无效或重复')
-  if mode not in {'intro','static','proxy'}:raise ValueError('不支持的部署方式')
+  if mode not in {'intro','static','proxy','external'}:raise ValueError('不支持的部署方式')
+  if mode=='external' and (id!='qingdeng' or port!=4317):raise ValueError('独立站入口仅用于现有青灯服务 4317')
   if mode=='static' and id not in {'music','podcast','video','liubao','avatar'}:raise ValueError(NAMES[id]+' 尚无可运行静态构建，请使用宣传页或配置后端')
   if type(port) is not int or not 1024<=port<=65535 or port in {9180}:raise ValueError('后端端口必须为 1024–65535，且不能指向管理服务')
   seen.add(id);result.append({'id':id,'name':NAMES[id],'mode':mode,'port':port})
@@ -30,7 +31,8 @@ def render(data):
  for r in data['routes']:
   id=r['id'];url='/apps/'+id+'/'
   lines.append('location = /apps/'+id+' { return 301 '+url+'; }')
-  if r['mode']=='intro':lines.append('location ^~ '+url+' { return 302 /tools/'+id+'/; }')
+  if r['mode']=='external':lines.append('location ^~ '+url+' { return 302 http://8.133.244.26:4317/; }')
+  elif r['mode']=='intro':lines.append('location ^~ '+url+' { return 302 /tools/'+id+'/; }')
   elif id=='liubao' and r['mode']=='static':lines.append('location ^~ '+url+' { return 302 /liubao/; }')
   elif r['mode']=='static':
    if id=='avatar':

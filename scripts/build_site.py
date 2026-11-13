@@ -8,7 +8,7 @@ tools=[
  dict(id='podcast',name='bokeForYou',title='给一段好内容，留一点时间。',category='声音与影像',kind='Windows',status='已开源',repo='bokeForYou',description='中文与英文播客、长视频与短视频，本地缓存与逐字稿，让每一次聆听都能继续。',features=['播客与视频','离线播放','逐字稿'],action='项目与使用说明',url='https://github.com/kiok1210/bokeForYou',visual='wave'),
  dict(id='video',name='videoForYou',title='把灵感发生的过程，录下来。',category='声音与影像',kind='Windows',status='已开源',repo='videoForYou',description='屏幕、系统声音与麦克风一起记录。实时滤镜、贴图和鼠标高亮，轻松录下软件演示。',features=['桌面录屏','实时特效','画中画'],action='项目与使用说明',url='https://github.com/kiok1210/videoForYou',visual='screen'),
  dict(id='avatar',name='数字人口播',title='让文字，多一种表达。',category='声音与影像',kind='本地工作流',status='源码已整理',repo='digital-human',description='从照片与文案出发，串联配音、口型、字幕与剪辑。本地运行，云端引擎可选。',features=['照片与文案','配音与口型','自动剪辑'],action='项目与使用说明',url='https://github.com/kiok1210/digital-human',visual='avatar'),
- dict(id='qingdeng',name='青灯',title='留一盏灯，写一个长故事。',category='文字与创作',kind='AI 小说写作',status='源码待上传',repo='qingdeng',description='AI 辅助小说写作工具。这里先为故事留一个位置，功能与使用说明将在源码上传后补齐。',features=['文学创作','AI 辅助','持续打磨'],action='查看项目进展',url='https://github.com/kiok1210/qingdeng',visual='book'),
+ dict(id='qingdeng',name='青灯',title='留一盏灯，写一个长故事。',category='文字与创作',kind='AI 小说写作',status='在线可用',repo='qingdeng',description='AI 辅助小说写作工具，现有 Linux 书房已接入。进入青灯后，使用原有账号登录并继续创作。',features=['文学创作','AI 辅助','在线书房'],action='进入青灯书房',url='http://8.133.244.26:4317/',visual='book'),
  dict(id='liubao',name='六宝',title='让古老的故事，长出新画面。',category='文字与创作',kind='在线阅读 · 创作资源',status='在线可用',repo='liubao',description='不打烊潮玩店的六个小伙伴，走进成语与古诗词。漫画、故事与原文，在这里慢慢读。',features=['文学漫画','成语典故','古诗词'],action='进入故事馆',url='/liubao/',visual='comic'),
  dict(id='lumen',name='lumen remote',title='远方的桌面，也在手边。',category='连接与效率',kind='远程桌面',status='源码待上传',repo='lumen-remote',description='远程桌面工具。仓库已预留，后续从其他设备上传源码，再补齐安装方式与连接说明。',features=['远程桌面','跨设备','持续打磨'],action='查看项目进展',url='https://github.com/kiok1210/lumen-remote',visual='remote'),
  dict(id='dukou',name='渡口',title='每一次连接，都有一个落点。',category='连接与效率',kind='SSH 连接工具',status='源码待上传',repo='dukou',description='SSH 连接工具。为日常服务器连接留一个统一入口，具体功能与下载将在源码上传后开放。',features=['SSH','服务器连接','持续打磨'],action='查看项目进展',url='https://github.com/kiok1210/dukou',visual='terminal')
@@ -38,3 +38,4 @@ runpy.run_path(str(ROOT/'scripts'/'build_admin.py'))
 runpy.run_path(str(ROOT/'scripts'/'build_avatar.py'))
 runpy.run_path(str(ROOT/'scripts'/'build_media.py'))
 runpy.run_path(str(ROOT/'scripts'/'build_content.py'))
+runpy.run_path(str(ROOT/'scripts'/'refine_typography.py'))

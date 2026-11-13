@@ -51,9 +51,9 @@ Nginx 已包含两个域名。DNS 生效后还需安装有效 TLS 证书并配�
 
 管理操作只允许 HTTPS 或 SSH 隧道访问。公网 HTTP 可看到登录页，但不能提交口令、修改配置。当前使用：
 
-    ssh -i C:\Users\Administrator\.ssh\vinylbox_server -L 18081:127.0.0.1:80 root@8.133.244.26
+    ssh -i C:\Users\Administrator\.ssh\vinylbox_server -L 18082:127.0.0.1:80 root@8.133.244.26
 
-随后访问 http://127.0.0.1:18081/admin/ 。随机口令在本机 local-admin-credentials.md，已被 Git 排除；服务器只保存 PBKDF2-SHA256 哈希。
+随后访问 http://127.0.0.1:18082/admin/ 。随机口令在本机 local-admin-credentials.md，已被 Git 排除；服务器只保存 PBKDF2-SHA256 哈希。
 
 ## 可视化配置
 
@@ -90,3 +90,11 @@ Linux 同样可用生成器，或在虚拟主机中设置 root 为 dist。此便
 ## 回滚
 
 将 current 切回 releases 下旧版本的 dist，执行 nginx -t -c /opt/budayang-comics/nginx.conf 后重载 budayang-comics。完整配置备份为 nginx.conf.before-aione1-<版本>。不要删除现有漫画目录。
+
+## 青灯与阅读体验更新
+
+已确认现有青灯源码位于 /home/ymm/qingdeng，入口 server.mjs，另有 server 与 public 目录。现有服务使用根路径登录，因此站内 /apps/qingdeng/ 跳转到原有 http://8.133.244.26:4317/，保留登录、Cookie 和资源路径。原服务未重装或改动，源码尚未同步到 GitHub 预留仓库。
+
+字体统一为正文 16px、说明与标签最小 14px，并加深浅色文字；手机导航换行。博客园已加入导航和关于页面。
+
+原本机 18081 端口现被其他下载服务占用，管理隧道改为只绑定 127.0.0.1:18082；已核验其 session 接口返回 transportAllowed=true。

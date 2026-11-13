@@ -18,7 +18,7 @@ class Handler(SimpleHTTPRequestHandler):
   if route.startswith('/apps/avatar/') and any(route.startswith('/apps/avatar/'+p) for p in ['api/','assets/','outputs/']):
    target='http://127.0.0.1:7860/'+self.path[len('/apps/avatar/'):]
   elif route.startswith('/admin/api/'):
-   target='http://127.0.0.1:18081'+self.path
+   target=os.environ.get('AIONE_ADMIN_ORIGIN','http://127.0.0.1:18082')+self.path
   else:return False
   body=self.rfile.read(int(self.headers.get('Content-Length',0))) if self.command=='POST' else None
   headers={k:v for k,v in self.headers.items() if k.lower() not in {'connection','content-length','accept-encoding'}}

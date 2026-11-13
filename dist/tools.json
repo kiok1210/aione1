@@ -77,16 +77,16 @@
     "title": "留一盏灯，写一个长故事。",
     "category": "文字与创作",
     "kind": "AI 小说写作",
-    "status": "源码待上传",
+    "status": "在线可用",
     "repo": "qingdeng",
-    "description": "AI 辅助小说写作工具。这里先为故事留一个位置，功能与使用说明将在源码上传后补齐。",
+    "description": "AI 辅助小说写作工具，现有 Linux 书房已接入。进入青灯后，使用原有账号登录并继续创作。",
     "features": [
       "文学创作",
       "AI 辅助",
-      "持续打磨"
+      "在线书房"
     ],
-    "action": "查看项目进展",
-    "url": "https://github.com/kiok1210/qingdeng",
+    "action": "进入青灯书房",
+    "url": "http://8.133.244.26:4317/",
     "visual": "book"
   },
   {

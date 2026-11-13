@@ -57,4 +57,11 @@ class AdminTests(unittest.TestCase):
   with patch.object(a.subprocess,'run',return_value=Result()):
    with self.assertRaises(ValueError):a.apply(a.default_config())
   self.assertEqual(a.ROUTES.read_text(),'# original config');self.assertFalse(a.CONFIG.exists())
+ def test_external_destination_is_restricted(self):
+  data=a.default_config();row=next(r for r in data['routes'] if r['id']=='qingdeng')
+  self.assertIn('return 302 http://8.133.244.26:4317/',a.render(data))
+  row['port']=8787
+  with self.assertRaises(ValueError):a.render(data)
+  row['port']=4317;row['id']='music'
+  with self.assertRaises(ValueError):a.render(data)
 if __name__=='__main__':unittest.main(verbosity=2)

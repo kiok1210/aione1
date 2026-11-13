@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,urllib.request,urllib.error,http.cookiejar,argparse,datetime
 R=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('--public',default='http://8.133.244.26');p.add_argument('--tunnel',default='http://127.0.0.1:18081');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--public',default='http://8.133.244.26');p.add_argument('--tunnel',default='http://127.0.0.1:18082');a=p.parse_args()
 report={'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'public':a.public,'checks':[]}
 DIRECT=urllib.request.build_opener(urllib.request.ProxyHandler({}))
 def request(url,data=None,opener=None,headers=None,method=None):

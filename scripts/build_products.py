@@ -3,6 +3,7 @@ import json,html
 R=Path(__file__).resolve().parents[1]; D=R/'dist'
 items=json.loads((D/'tools.json').read_text('utf-8'))
 details={
+ 'qingdeng': [('把故事继续写下去','青灯是 AI 辅助小说写作工具，现有书房已经在 Linux 服务器运行。'),('进入已有书房','点击进入青灯，使用原有登录方式打开实际工作台。')],
  'music': [('一台属于你的虚拟唱机','搜索或粘贴 YouTube 链接，把喜欢的声音缓存到本地；转动的黑胶唱片和唱臂，让聆听多一点仪式感。'),('歌词与聆听一起前进','逐行歌词、非中文歌词翻译、单曲与列表循环。听书时可调倍速，也可以设置睡眠定时。'),('把音乐库留在手边','分类、收藏、下载队列与播放进度记忆，帮助你整理真正想反复听的内容。')],
  'podcast': [('听节目，也可以看视频','中文播客、英文播客、长视频和短视频，切换内容模式，找到适合此刻的内容。'),('把一集节目听完整','本地缓存、倍速、睡眠定时和断点续听。通勤没听完，下一次接着来。'),('让文字成为聆听的线索','逐字稿支持点行跳转，附中文对照；也可以关闭字幕，专注声音。')],
  'video': [('画面与声音，一起留下','选择屏幕或窗口，录制系统声音和麦克风，按需要调整分辨率与帧率。'),('演示时，把重点讲清楚','实时滤镜、文字贴图、摄像头画中画与鼠标高亮，帮助观众跟上每一步。'),('录完，就收进作品库','支持暂停、继续与快捷键。完成后直接回放，找到文件，再开始下一次表达。')],
@@ -41,6 +42,12 @@ for t in items:
   file,flabel=files[id]
   body=f'''<a class="breadcrumbs" href="tools/{id}/">← {t['name']} 项目介绍</a><section class="use-hero"><p class="eyebrow">GET STARTED / 部署与使用</p><h1>{t['name']}</h1><p>{'在你的电脑上部署，浏览器访问本机创作台。' if id=='avatar' else '下载桌面应用，在你的电脑上开始使用。'}</p><div class="download-panel"><div><span>{flabel}</span><p>{'源码、环境脚本与使用说明；不包含模型与个人数据。' if id=='avatar' else '文件由 AIONE1 服务器提供。请在 Windows 10 / 11 x64 上安装。'}</p></div><a class="primary" href="downloads/{file}" download>下载{('源码包' if id=='avatar' else '安装包')} ↓</a></div><p class="download-meta"><a href="downloads/SHA256SUMS.txt">查看文件 SHA-256 校验值</a></p></section><section class="setup-steps"><p class="eyebrow">STEP BY STEP</p><h2>{'本地部署步骤' if id=='avatar' else '从安装到第一次使用'}</h2>{''.join(f'<article><span>0{i+1}</span><p>{s}</p></article>' for i,s in enumerate(steps[id]))}</section><div class="use-note"><h3>{'关于运行环境' if id=='avatar' else '桌面应用的使用方式'}</h3><p>{'数字人口播需要在本机安装推理环境和模型。这个页面提供真实项目源码与部署脚本，当前未将推理服务部署在公网服务器。默认本地引擎在本机处理，选择云端引擎时按配置调用第三方服务。' if id=='avatar' else '此项目以桌面客户端运行，网站负责介绍、下载与安装指引。浏览器内不会启动你电脑上的应用；下载后请从本机打开。'}</p></div><div class="source-footer"><a href="tools/{id}/">返回产品介绍</a><a href="https://github.com/kiok1210/{t['repo']}" target="_blank" rel="noopener">开发者：查看源码 ↗</a></div>'''
   page(Path('use')/id/'index.html',t['name']+' · 部署与使用',body)
+
+p=D/'tools'/'qingdeng'/'index.html'
+text=p.read_text('utf-8').replace('href="use/qingdeng/"','href="http://8.133.244.26:4317/"').replace('部署与使用','进入青灯书房').replace('查看真实下载与本地部署步骤，按自己的节奏开始。','已接入现有 Linux 服务，进入后使用青灯自己的登录页。').replace('开发者：查看源码 ↗','项目仓库 ↗')
+p.write_text(text,encoding='utf-8')
+p=D/'apps'/'qingdeng';p.mkdir(parents=True,exist_ok=True)
+(p/'index.html').write_text('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta http-equiv="refresh" content="0;url=http://8.133.244.26:4317/"><title>进入青灯书房</title></head><body style="font:18px/1.8 sans-serif;padding:40px"><a href="http://8.133.244.26:4317/">进入青灯书房 →</a></body></html>',encoding='utf-8')
 
 for id in ['music','podcast','video']:
  p=D/'tools'/id/'index.html'
